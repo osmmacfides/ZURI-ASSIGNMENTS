@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetsing</title>
+</head>
+<body>
+  <h2>Database Display on Artistes, Songs and Lyrics</h2>
+ 
+  {% for artiste in artistes %}
+     <ul>
+      <li> {{artiste.first_name}}</li>
+         <li>{{artiste.last_name}}</li>
+         <li>{{artiste.age}}</li>      
+     </ul>
+  {% endfor %}
+
+  <br>
+  <br>
+  <hr>
+  <br>
+  {% for song in songs %}
+     <ul>
+      <li> {{song.title}}</li>
+      <li> {{song.date_released}}</li>
+      <li> {{song.likes}}</li>
+      <li> {{song.artiste_id}}</li>
+              
+     </ul>
+    
+  {% endfor %}
+
+ <br>
+  <br>
+  <hr>
+  <br>
+  {% for lyric in lyrics %}
+     <ul>
+      <li> {{lyric.content}}</li>
+      <li> {{lyric.song_id}}</li>
+              
+     </ul>
+    
+  {% endfor %}
+</body>
+</html>
