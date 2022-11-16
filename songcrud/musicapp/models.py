@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 # Create your models here.
 
@@ -15,11 +16,9 @@ class Song(models.Model):
   artiste_id = models.ForeignKey(Artiste, on_delete=models.CASCADE)
 
 class Lyric(models.Model):
-  
   content = models.CharField(max_length=255)
   song_id =models.ForeignKey(Song, on_delete=models.CASCADE)
   
-
   
 
   
